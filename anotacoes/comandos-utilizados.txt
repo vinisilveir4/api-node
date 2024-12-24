@@ -1,0 +1,11 @@
+yarn init - inicializa o projeto
+yarn add express - framework pra criação de apis rest no node
+yarn add -D typescript - typescript em ambiente de desenvolvimento
+yarn add -D @types/express - integração do express com typescript
+yarn add -D ts-node-dev - utilizado pra executar arquivos typescript diretamente
+
+yarn ts-node-dev src/index.ts - inicia o servidor utilizando ts-node-dev pra compilação de ts
+yarn tsc --init - gera arquivo de configuração de compilação do typescript
+yarn tsc - compila os arquivo ts pra js ysando typescript compiler
+node src/index.js - roda o código javascript no ambiente de execução node js
+node ./build/index.js

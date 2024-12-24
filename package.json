@@ -1,0 +1,21 @@
+{
+  "name": "api-rest-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Vinícius Silveira",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "ts-node-dev src/index.ts"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "http-status-codes": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.2"
+  }
+}

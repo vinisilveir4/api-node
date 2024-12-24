@@ -1,0 +1,19 @@
+tsconfig:
+
+ "outDir": "./build" - pasta onde será gerado os arquivos compilados
+ "rootDir": "./src" - pasta onde contém os arquivos ts
+
+estrutura de pastas:
+
+controller - gerenciar a logica de entrada e saida direcionando os dados
+da requisição pro serviço especifico
+
+middlewares - funções intermediarias como autenticação e validação
+
+shared - arquivos/pastas compartilhadas em toda aplicação
+
+database - operações diretas com banco de dados
+
+services - operações externas como acesso a apis e também regras de negócio
+
+routes - endpoints da aplicação, acesso a api
