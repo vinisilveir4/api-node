@@ -8,7 +8,7 @@ estrutura de pastas:
 controller - gerenciar a logica de entrada e saida direcionando os dados
 da requisição pro serviço especifico
 
-middlewares - funções intermediarias como autenticação e validação
+middleware - funções intermediarias nas requisições como autenticação e validação
 
 shared - arquivos/pastas compartilhadas em toda aplicação
 
