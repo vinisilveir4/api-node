@@ -10,7 +10,12 @@ router.get("/", (_, res) => {
     res.send("Rota teste...");
 });
 
-// passa o metodo create de cidade que recebe os parametros req e res
+
 router.post("/cidades", CidadesController.createValidator, CidadesController.create);
+router.get("/cidades", CidadesController.getAllValidator, CidadesController.getAll);
+router.get("/cidades/:id", CidadesController.getByIdValidator, CidadesController.getById);
+router.delete("/cidades/:id", CidadesController.deleteValidator, CidadesController.deleteById);
+router.put("/cidades/:id", CidadesController.updateValidator, CidadesController.updateById);
+
 
 export { router };

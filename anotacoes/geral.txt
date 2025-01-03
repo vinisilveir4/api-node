@@ -1,0 +1,49 @@
+tsconfig:
+
+ "outDir": "./build" - pasta onde será gerado os arquivos compilados
+ "rootDir": "./src" - pasta onde contém os arquivos ts
+
+estrutura de pastas:
+
+controller - gerenciar a logica de entrada e saida direcionando os dados
+da requisição pro serviço especifico
+
+middleware - funções intermediarias nas requisições como autenticação e validação
+
+shared - arquivos/pastas compartilhadas em toda aplicação
+
+database - operações diretas com banco de dados
+
+services - operações externas como acesso a apis e também regras de negócio
+
+routes - endpoints da aplicação, acesso a api
+
+scripts:
+
+"scripts": {
+    "dev": "ts-node-dev src/index.ts", // starta o servidor em ambiente de desenvolvimento
+    "build": "tsc" // "yarn tsc" gerar o build da aplicação (compilação)
+  },
+
+
+configurações para hospedagem:
+
+"scripts": {
+    "postinstall": "tsc" // ao especificar o rpositório no hiroku irá instalar todas as dependencias e feito isto
+    // vai rodar este comando para buildar o projeto
+    "production": "node ./build/index.js" // roda o código javascript direto no ambiente de execução do node
+  },
+
+"engines": {
+    "node": "22.12.0" // define a versão do node
+  }
+
+
+migrations:
+
+scripts: {
+   "knex:migrate": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:latest", // roda a ultima migrations
+    "knex:roolback": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:rollback", // volta a anterior, exclui a ultima migration
+    "knex:roolback-all": "knex --knexfile ./src/server/database/knex/Environment.ts migrate:rollback --all", // volta tudo
+    "knex:seed": "knex --knexfile ./src/server/database/knex/Environment.ts seed:run"
+}
